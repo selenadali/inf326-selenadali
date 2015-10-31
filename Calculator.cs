@@ -20,7 +20,7 @@ namespace Calculator
         {
             if (value > 100)
             {
-                throw new ArgumentOutOfRangeException("by"); //BUG
+                throw new ArgumentOutOfRangeException("value"); //BUG
 
             }
             return value / by;

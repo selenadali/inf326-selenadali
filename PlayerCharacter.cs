@@ -7,10 +7,22 @@ namespace AssertDemo2
     {
         public PlayerCharacter()
         {
-            Name = GenerateName();
+            Name = GenerateName(); //"";
             IsNoob = true;
-            CreateStartingWeapons();
+          CreateStartingWeapons();
         }
+
+       private void CreateStartingWeapons()
+       {
+           Weapons = new List<string>()
+           {   "Long Bow",
+               "Short Bow",
+               "Short Sword",
+               
+               //"Long Bow",
+               //" Staff Of Wonder",
+           };
+       }
 
         public int Health { get; set; }
         public string Name { get; private set; }
@@ -34,9 +46,13 @@ namespace AssertDemo2
         {
             var names = new[]
             {
-                "Danieth", 
-                ////___???????????????
-        }
+                "Danieth",
+                "Derick",
+                "Shalnorr",
+                "G'Toth'lop",
+                "Boldrakteethtop"
+            };
+            return names[new Random().Next(0, names.Length)];
         }
     }
 }
